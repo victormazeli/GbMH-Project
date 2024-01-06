@@ -1,0 +1,9 @@
+type ServiceCategory implements Node {
+    id: ID!
+    createdAt: String!
+	  updatedAt: String!
+
+    name: String
+	services: [Service]
+	subCategories: [ServiceSubCategory!]!
+}

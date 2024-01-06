@@ -1,0 +1,13 @@
+extend type Mutation {
+
+	setProductActive(input: SetProductActiveInput!): SetProductActivePayload!
+}
+
+input SetProductActiveInput {
+	active: Boolean!
+	productID: ID!
+}
+
+type SetProductActivePayload {
+	product: Product!
+}

@@ -1,0 +1,10 @@
+type ServiceCategory {
+	id: ID! @id
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+
+    name: String!
+
+    subCategories: [ServiceSubCategory] @relation(onDelete: CASCADE)
+    company: Company @relation(link: INLINE)
+}

@@ -1,0 +1,7 @@
+input BranchImageSlotInput {
+	slotNumber: Int
+	slotID: ID
+	branchID: ID!
+	newImage: Upload!
+	new: Boolean!
+}

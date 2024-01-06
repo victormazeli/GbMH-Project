@@ -1,0 +1,17 @@
+extend type Mutation {
+	createProductCategory(
+		input: CreateProductCategoryInput!
+	): CreateProductCategoryPayload!
+}
+
+input CreateProductCategoryInput {
+	data: CreateProductCategoryData!
+}
+
+input CreateProductCategoryData {
+	name: String
+}
+
+type CreateProductCategoryPayload {
+	category: ProductCategory!
+}

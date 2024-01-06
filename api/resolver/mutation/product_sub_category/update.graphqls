@@ -1,0 +1,18 @@
+extend type Mutation {
+	updateProductSubCategory(
+		input: UpdateProductSubCategoryInput!
+	): UpdateProductSubCategoryPayload!
+}
+
+input UpdateProductSubCategoryInput {
+	id: ID!
+	patch: UpdateProductSubCategoryData!
+}
+
+input UpdateProductSubCategoryData {
+	name: String
+}
+
+type UpdateProductSubCategoryPayload {
+	subCategory: ProductSubCategory!
+}

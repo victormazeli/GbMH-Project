@@ -1,0 +1,19 @@
+extend type Mutation {
+	"Edit employee availability"
+	EditEmployeeAvailability(
+		input: EditEmployeeAvailabilityInput!
+	): EditEmployeeAvailabilityPayload!
+}
+
+input EditEmployeeAvailabilityInput {
+#	branch: ID!
+	startDate: Time!
+	endDate: Time!
+	employeeID: ID!
+	status: AvailabilityStatus!
+}
+
+
+type EditEmployeeAvailabilityPayload {
+	employee: Employee!
+}

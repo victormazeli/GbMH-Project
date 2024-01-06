@@ -1,0 +1,4 @@
+extend type Query {
+	serviceSubCategory(id: ID!): ServiceSubCategory!
+	serviceSubCategories: [ServiceSubCategory]!
+}

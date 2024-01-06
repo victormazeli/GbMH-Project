@@ -1,0 +1,11 @@
+extend type Mutation {
+	deleteProductCategory(input: DeleteProductCategoryInput!): DeleteProductCategoryPayload!
+}
+
+input DeleteProductCategoryInput {
+	id: ID!
+}
+
+type DeleteProductCategoryPayload {
+	category: ProductCategory!
+}

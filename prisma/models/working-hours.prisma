@@ -1,0 +1,22 @@
+type WorkingHours {
+	id: ID! @id
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+
+	user: User! @relation(name: "UserWorkingHours", link: INLINE)
+
+	day: DayOfWeek!
+
+	notWorking: Boolean! @default(value: true)
+	break: Boolean! @default(value: false)
+
+	# morning
+	startForenoon: DateTime
+	endForenoon: DateTime
+
+	# afternoon
+	startAfternoon: DateTime
+	endAfternoon: DateTime
+	company: Company @relation(link: INLINE)
+	status: AvailabilityStatus! @default(value: AVAILABLE)
+}

@@ -1,0 +1,12 @@
+type ServiceSubCategory {
+	id: ID! @id
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+
+    name: String!
+
+    category: ServiceCategory @relation(link: INLINE)
+    company: Company @relation(link: INLINE)
+
+    services: [Service!]
+}

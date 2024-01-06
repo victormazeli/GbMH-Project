@@ -1,0 +1,12 @@
+type BranchImageSlot {
+	id: ID! @id
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+
+  slotNumber: Int!
+
+  branch: Branch @relation(name: "SlotToBranch", link: INLINE)
+  company: Company @relation(link: INLINE)
+
+  imageUrl: String!
+}

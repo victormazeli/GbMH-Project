@@ -1,0 +1,14 @@
+extend type Mutation {
+
+	replaceExistingService(input: ReplaceExistingServiceInput!, language: String): ReplaceExistingServicePayload!
+}
+
+input ReplaceExistingServiceInput {
+	categoryID: ID!
+	subCategoryID: ID!
+	services: [String!]!
+}
+
+type ReplaceExistingServicePayload {
+	serviceSubCategory: ServiceSubCategory!
+}

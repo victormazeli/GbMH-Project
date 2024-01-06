@@ -1,0 +1,12 @@
+type ProductSubCategory {
+	id: ID! @id
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+
+  name: String!
+
+  category: ProductCategory @relation(link: INLINE)
+
+  products: [Product!]
+  company: Company @relation(link: INLINE)
+}

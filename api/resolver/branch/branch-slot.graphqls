@@ -1,0 +1,11 @@
+type BranchImageSlot {
+	id: ID!
+	createdAt: String!
+	updatedAt: String!
+
+	slotNumber: Int!
+
+	branch: Branch!
+
+	imageUrl: String!
+}

@@ -1,0 +1,4 @@
+extend type Query {
+	productSubCategory(id: ID!): ProductSubCategory!
+	productSubCategories: [ProductSubCategory]!
+}

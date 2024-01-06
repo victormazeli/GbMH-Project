@@ -1,0 +1,13 @@
+extend type Mutation {
+
+	setServiceActive(input: SetServiceActiveInput!): SetServiceActivePayload!
+}
+
+input SetServiceActiveInput {
+	active: Boolean!
+	serviceID: ID!
+}
+
+type SetServiceActivePayload {
+	service: Service!
+}

@@ -1,0 +1,11 @@
+extend type Mutation {
+	deleteServiceSubCategory(input: DeleteServiceSubCategoryInput!): DeleteServiceSubCategoryPayload!
+}
+
+input DeleteServiceSubCategoryInput {
+	id: ID!
+}
+
+type DeleteServiceSubCategoryPayload {
+	subCategory: ServiceSubCategory!
+}

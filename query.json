@@ -1,0 +1,20 @@
+
+{
+	"query": "mutation createBranch($input: CreateBranchInput!, $language: String) {\n  createBranch(input: $input, language: $language){\n    branch{\n      id\n      name\n      address\n      images{\n        id\n        url\n      }\n      slots{\n        id\n        slotNumber\n        fileName\n      }\n    }\n  }\n}",
+	"variables": {
+	"input": {
+		"company": "clpaiqcom00cm0d191eaii70k",
+		"data": {
+			"name": "Berlin",
+			"phoneNumber": "+45048888382",
+			"address": "21, Stargit Berlin",
+			"websiteUrl": "www.appsyou.com",
+			"imprint": "",
+			"images": null
+		}
+
+	},
+	"language": "en"
+}
+}
+

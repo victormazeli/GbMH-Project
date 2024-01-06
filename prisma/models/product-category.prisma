@@ -1,0 +1,10 @@
+type ProductCategory {
+	id: ID! @id
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+
+    name: String!
+
+    subCategories: [ProductSubCategory] @relation(onDelete: CASCADE)
+    company: Company @relation(link: INLINE)
+}

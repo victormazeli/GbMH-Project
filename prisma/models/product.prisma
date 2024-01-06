@@ -1,0 +1,22 @@
+type Product {
+	id: ID! @id
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+
+	name: LocalizedString! @relation(name: "LocalizedProductName", link: INLINE)
+	desc: LocalizedString! @relation(name: "LocalizedProductDescription", link: INLINE)
+	price: Int!
+	capacity: String
+	category: ProductCategory @relation(link: INLINE)
+	subCategory: ProductSubCategory @relation(link: INLINE)
+	image: String
+	attributes: [ProductServiceAttribute!]! @relation(name: "ProductAttributeParent", onDelete: CASCADE)
+
+	branch: Branch! @relation(link: INLINE)
+	company: Company @relation(link: INLINE)
+
+	reviews: [Review!]! @relation(name: "ReviewToProduct", onDelete: CASCADE)
+
+	deleted: Boolean! @default(value: false)
+	active: Boolean! @default(value: true)
+}

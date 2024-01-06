@@ -1,0 +1,19 @@
+extend type Mutation {
+	"Deletes a branch. Can only be invoked by a company manager."
+	deleteBranch(input: DeleteBranchInput!, language: String): DeleteBranchPayload!
+	deleteBranchImage(input: DeleteBranchImageInput!): DeleteBranchPayload!
+}
+
+input DeleteBranchInput {
+	id: ID!
+}
+
+type DeleteBranchPayload {
+	branch: Branch!
+}
+
+input DeleteBranchImageInput {
+	slotID: ID!
+	branchID: ID!
+}
+

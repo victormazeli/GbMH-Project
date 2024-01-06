@@ -1,0 +1,17 @@
+extend type Mutation {
+	createServiceCategory(
+		input: CreateServiceCategoryInput!
+	): CreateServiceCategoryPayload!
+}
+
+input CreateServiceCategoryInput {
+	data: CreateServiceCategoryData!
+}
+
+input CreateServiceCategoryData {
+	name: String
+}
+
+type CreateServiceCategoryPayload {
+	category: ServiceCategory!
+}

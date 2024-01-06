@@ -1,0 +1,14 @@
+extend type Mutation {
+
+	replaceExistingProduct(input: ReplaceExistingProductInput!, language: String): ReplaceExistingProductsPayload!
+}
+
+input ReplaceExistingProductInput {
+	categoryID: ID!
+	subCategoryID: ID!
+	products: [String!]!
+}
+
+type ReplaceExistingProductsPayload {
+	productSubCategory: ProductSubCategory!
+}

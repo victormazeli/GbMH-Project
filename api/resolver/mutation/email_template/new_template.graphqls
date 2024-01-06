@@ -1,0 +1,4 @@
+extend type Mutation {
+	"A free mutation for creating email templates"
+	newEmailTemplate: String!
+}

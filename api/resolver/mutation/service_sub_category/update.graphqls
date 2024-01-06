@@ -1,0 +1,18 @@
+extend type Mutation {
+	updateServiceSubCategory(
+		input: UpdateServiceSubCategoryInput!
+	): UpdateServiceSubCategoryPayload!
+}
+
+input UpdateServiceSubCategoryInput {
+	id: ID!
+	patch: UpdateServiceSubCategoryData!
+}
+
+input UpdateServiceSubCategoryData {
+	name: String
+}
+
+type UpdateServiceSubCategoryPayload {
+	subCategory: ServiceSubCategory!
+}

@@ -1,0 +1,29 @@
+extend type Mutation {
+	"Creates a service. Can only be invoked by a company manager."
+	createService(
+		input: CreateServiceInput!
+		language: String
+	): CreateServicePayload!
+}
+
+input CreateServiceInput {
+	branch: ID!
+	data: CreateServiceData!
+}
+
+input CreateServiceData {
+	name: String!
+	desc: String
+	price: Float!
+	"The duration of this service in minutes."
+	duration: Int!
+	category: ID!
+	subcategory: ID!
+	genderTarget: GenderTarget!
+	image: Upload
+	attributes: [ProductServiceAttributeInput!]
+}
+
+type CreateServicePayload {
+	service: Service!
+}

@@ -1,0 +1,39 @@
+extend type Mutation {
+	"Updates a branch. Can only be invoked by a company manager."
+	updateBranch(input: UpdateBranchInput!, language: String): UpdateBranchPayload!
+	addImageSlot(input: BranchImageSlotInput!): UpdateBranchPayload!
+}
+
+input UpdateBranchInput {
+	id: ID!
+	patch: UpdateBranchPatch!
+}
+
+input UpdateBranchPatch {
+	name: String
+	phoneNumber: String
+	address: String
+	welcomeMessage: String
+	images: [Upload]
+	imagesSlot: [BranchImageSlotInput]
+	logo: Upload
+	appTheme: String
+	facebookLink: String,
+	tiktokLink: String,
+	instagramLink: String,
+	smtpSendHost: String
+	smtpSendPort: String
+	smtpUsername: String
+	smtpPassword: String
+	fromEmail: String
+	websiteUrl: String
+	navigationLink: String
+	sharingRedirectUrl: String
+	mailchimpApiKey: String
+	mailchimpListId: String
+	imprint: String
+}
+
+type UpdateBranchPayload {
+	branch: Branch!
+}

@@ -1,0 +1,18 @@
+extend type Mutation {
+	createServiceSubCategory(
+		input: CreateServiceSubCategoryInput!
+	): CreateServiceSubCategoryPayload!
+}
+
+input CreateServiceSubCategoryInput {
+	data: CreateServiceSubCategoryData!
+}
+
+input CreateServiceSubCategoryData {
+	categoryId: ID!
+	name: String
+}
+
+type CreateServiceSubCategoryPayload {
+	subCategory: ServiceSubCategory!
+}

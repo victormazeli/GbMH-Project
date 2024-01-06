@@ -1,0 +1,51 @@
+type Branch implements Node {
+	id: ID!
+	createdAt: String!
+	updatedAt: String!
+
+	name: String
+	welcomeMessage: String
+	phoneNumber: PhoneNumber
+	address: String
+
+	"TODO: multiple images - slot based (max 10 slots)"
+	images: [Image]
+
+	websiteUrl: String
+	navigationLink: String
+	sharingRedirectUrl: String
+	imprint: String
+
+	"TODO: Facebook, Tiktok, Instagram (Optional)"
+	facebookLink: String,
+	tiktokLink: String,
+	instagramLink: String,
+
+	company: Company!
+
+	openingHours: OpeningHours!
+
+	logo: Image
+	appTheme: String
+
+	news: [News!]!
+
+	slots: [BranchImageSlot]
+
+	smtpSendHost: String
+	smtpSendPort: String
+	smtpUsername: String
+	smtpPassword: String
+	fromEmail: String
+
+	reviews: AppointmentReviewConnection!
+	reviewAggregations: ReviewAggregations
+
+	mailchimpApiKey: String
+	mailchimpListId: String
+	mailchimpCredentialsValid: Boolean
+}
+
+type BranchConnection {
+	nodes: [Branch!]!
+}

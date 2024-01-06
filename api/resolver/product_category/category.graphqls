@@ -1,0 +1,8 @@
+type ProductCategory implements Node {
+    id: ID!
+    createdAt: String!
+	  updatedAt: String!
+	  name: String
+	  products: [Product]
+	  subCategories: [ProductSubCategory!]!
+}

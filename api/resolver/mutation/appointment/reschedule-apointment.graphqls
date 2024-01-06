@@ -1,0 +1,19 @@
+extend type Mutation {
+	"""
+	Reschedule an appointment, customer can reschedule an appointment
+	"""
+	rescheduleAppointment(
+		input: RescheduleAppointmentInput!
+		language: String
+	): RescheduleAppointmentPayload!
+}
+
+input RescheduleAppointmentInput {
+	id: ID!
+	newDate: Time!
+	employeeID: ID
+}
+
+type RescheduleAppointmentPayload {
+	appointment: Appointment!
+}
